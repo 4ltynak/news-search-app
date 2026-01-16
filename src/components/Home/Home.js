@@ -75,11 +75,12 @@ function HomePage() {
     }, [myFavourites]);
 
     return (
-        <Grid container className="main-container" direction="column" rowSpacing={0} sx={{ minHeight: "100vh", width: "100%", overflowY: "hidden"}}>
+        <Grid container className="main-container" direction="column" rowSpacing={0} sx={{height: "100vh", overflow: "hidden", width: "100vw"
+  }}>
             <Grid item className="header-container" sx={{width: "100%"}}>
                 <Header keyword={keyword} handleSetKeyword={handleSetKeyword} handleError={handleError}/>
             </Grid>
-            <Grid item className="content-container" container sx={{ flex: 1, width: "100%", m: 0 }}>
+            <Grid item className="content-container" container sx={{ flex: 1, overflow: "hidden", m: 0 }}>
                         <Grid className="left-panel-container" container size={{xs: 12, md: 3}} sx={{height: "100%", backgroundColor: "#C0C9EE"}}>
                             <MyFavouritesPanel 
                             myFavourites={myFavourites}
